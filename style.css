@@ -174,3 +174,63 @@ canvas {
 #logout-button:hover {
     background-color: #243642;
 }
+
+#attendance-data {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e4e2f1;
+    border: 1px solid #243642;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(10, 66, 104, 0.8);
+}
+
+#attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 30px rgba(10, 66, 104, 0.8);
+}
+
+#attendance-table th, #attendance-table td {
+    padding: 10px;
+    border: 1px solid #0a4268;
+    text-align: center;
+    background-color: #c9ad77;
+}
+
+#attendance-table th {
+    background-color: #E2F1E7;
+    font-weight: bold;
+}
+
+#attendance-table td {
+    background-color: #E2F1E7;
+}
+
+#attendance-table tr:nth-child(even) {
+    background-color: #E2F1E7;
+}
+
+#attendance-table tr:hover {
+    background-color: #E2F1E7;
+}
+
+.delete-button, .save-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #243642;
+    color: #E2F1E7;
+}
+
+.save-button {
+    background-color: #0a4268;
+    color: #E2F1E7;
+}
+
+.delete-button:hover, .save-button:hover {
+    opacity: 0.8;
+}
