@@ -24,7 +24,7 @@ h1{
     border: solid #243642;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 10 10 20px rgba(36, 54, 66, 0.8);
+    box-shadow: 0 0 20px rgba(36, 54, 66, 0.8);
 }
 
 h3{
@@ -42,13 +42,14 @@ h3{
     padding: 10px 20px;
     background-color: #243642;
     color: #E2F1E7;
-    border: none;
+    border: #0e222e;
     cursor: pointer;
 }
 
 .login-form button:hover {
-    background-color: #E2F1E7; /* Background color on hover */
+    background-color: #fff; /* Background color on hover */
     color: #243642; /* Text color on hover */
+    border: #0e222e;
 }
 
 #teams {
@@ -56,6 +57,7 @@ h3{
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    
 }
 
 .team {
@@ -66,6 +68,7 @@ h3{
     cursor: pointer;
     width: 200px;
     text-align: left;
+    box-shadow: 0 0 20px rgba(36, 54, 66, 0.8);
 }
 
 #team-performance {
@@ -89,6 +92,7 @@ canvas {
 #calendarTable {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(36, 54, 66, 0.8);
 }
 
 #calendarTable th, #calendarTable td {
