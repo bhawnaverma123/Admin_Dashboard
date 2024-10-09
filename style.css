@@ -2,13 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E2F1E7;
+    background-color: #add1c5;
 }
 
 #login-page, #dashboard {
     text-align: center;
     padding: 50px;
     
+}
+h1{
+    color: #243642;
 }
 
 .hidden {
@@ -24,10 +27,15 @@ body {
     box-shadow: 10 10 20px rgba(36, 54, 66, 0.8);
 }
 
+h3{
+    color: #243642 ;
+}
+
 .login-form input {
     margin: 10px 0;
     padding: 10px;
-    width: 80% ;
+    width: 600px ;
+    
 }
 
 .login-form button {
@@ -39,8 +47,8 @@ body {
 }
 
 .login-form button:hover {
-    background-color: #E2F1E7;
-    color: #243642;
+    background-color: #E2F1E7; /* Background color on hover */
+    color: #243642; /* Text color on hover */
 }
 
 #teams {
@@ -91,23 +99,23 @@ canvas {
 }
 
 .sick-leave {
-    background-color: #E2F1E7; /* Red for sick leaves */
+    background-color: #D8AE7E; /* Red for sick leaves */
 }
 
 .paid-leave {
-    background-color: #E2F1E7; /* Green for paid leaves */
+    background-color: #FFB0B0; /* Green for paid leaves */
 }
 
 .attended {
-    background-color: #E2F1E7; /* Blue for attended days */
+    background-color: #c9ad77; /* Blue for attended days */
 }
 
 .weekend {
-    background-color: #E2F1E7; /* Gray for weekends */
+    background-color: #F8C794; /* Gray for weekends */
 }
 
 .empty {
-    background-color: #E2F1E7;
+    background-color: #FFF0D1;
 }
 
 /* Legend styling */
@@ -130,19 +138,19 @@ canvas {
 
 /* Legend color representations */
 .legend-item.sick-leave {
-    background-color: #E2F1E7;
+    background-color: #D8AE7E;
 }
 
 .legend-item.paid-leave {
-    background-color: #E2F1E7;
+    background-color: #FFB0B0;
 }
 
 .legend-item.attended {
-    background-color: #E2F1E7;
+    background-color: #c9ad77;
 }
 
 .legend-item.weekend {
-    background-color: #E2F1E7;
+    background-color: #F8C794;
 }
 
 
@@ -151,7 +159,7 @@ canvas {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #f44336;
+    background-color: #243642;
     color: #E2F1E7;
     border: none;
     padding: 10px 20px;
@@ -160,5 +168,5 @@ canvas {
 }
 
 #logout-button:hover {
-    background-color: #d32f2f;
+    background-color: #243642;
 }
