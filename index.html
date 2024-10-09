@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page">
+        <h1>Admin - Login</h1>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Username"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br>
+        
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <button id="logout-button" onclick="logout()">Logout</button>
+        <h1>Admin Dashboard</h1>
+        <div id="teams">
+            <div class="team" onclick="showTeamData('team1')">
+                <h3>First Team</h3>
+                <p>Leader: Roshan Singhania</p>
+                <p>Members: 5</p>
+                <p>Tasks Assigned: 10</p>
+                <p>Tasks Completed: 6</p>
+                <p>Ongoing Tasks: 4</p>
+            </div>
+            <!-- Add other teams similarly... -->
+
+            <div class="team" onclick="showTeamData('team2')">
+                <h3>Second Team</h3>
+                <p>Leader: Jashan Preet Singh</p>
+                <p>Members: 4</p>
+                <p>Tasks Assigned: 8</p>
+                <p>Tasks Completed: 7</p>
+                <p>Ongoing Tasks: 1</p>
+            </div>
+            <div class="team" onclick="showTeamData('team3')">
+                <h3>Third Team</h3>
+                <p>Leader: Sania Goyal</p>
+                <p>Members: 6</p>
+                <p>Tasks Assigned: 12</p>
+                <p>Tasks Completed: 8</p>
+                <p>Ongoing Tasks: 4</p>
+            </div>
+            <div class="team" onclick="showTeamData('team4')">
+                <h3>Fourth Team</h3>
+                <p>Leader: Taniya Singla</p>
+                <p>Members: 7</p>
+                <p>Tasks Assigned: 15</p>
+                <p>Tasks Completed: 10</p>
+                <p>Ongoing Tasks: 5</p>
+            </div>
+        </div>
+
+        <div id="team-performance" class="hidden">
+            <canvas id="performanceChart"></canvas>
+        </div>
+
+        <div id="calendar" class="hidden">
+            <h3>Team Calendar (October 2024)</h3>
+            <table id="calendarTable">
+                <thead>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Calendar data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+            <div id="legend">
+               <span class="legend-item sick-leave"></span> Sick Leave
+               <span class="legend-item paid-leave"></span> Paid Leave
+               <span class="legend-item attended"></span> Attended
+               <span class="legend-item weekend"></span> Weekend (Off)
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
