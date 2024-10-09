@@ -4,7 +4,7 @@ function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username === '' && password === '') {
+    if (username === 'admin' && password === 'admin123') {
         document.getElementById('login-page').classList.add('hidden');
         document.getElementById('dashboard').classList.remove('hidden');
     } else {
@@ -33,6 +33,9 @@ function showTeamData(teamId) {
     document.getElementById('team-performance').classList.remove('hidden');
     document.getElementById('calendar').classList.remove('hidden');
     loadCalendar();
+
+    // Show attendance data
+    showAttendanceData(teamId);
 }
 
 function updatePerformanceChart(data) {
@@ -110,3 +113,66 @@ function loadCalendar() {
         calendarElement.appendChild(row);
     }
 }
+
+function showAttendanceData(teamId) {
+    const attendanceData = {
+        team1: [
+            { member: 'John Doe', attendance: 'Present' },
+            { member: 'Jane Smith', attendance: 'Absent' },
+            { member: 'Bob Johnson', attendance: 'Present' }
+        ],
+        team2: [
+            { member: 'Alice Brown', attendance: 'Present' },
+            { member: 'Mike Davis', attendance: 'Absent' },
+            { member: 'Emily Chen', attendance: 'Present' }
+        ],
+        team3: [
+            { member: 'Sarah Lee', attendance: 'Present' },
+            { member: 'David Kim', attendance: 'Absent' },
+            { member: 'Kevin White', attendance: 'Present' }
+        ],
+        team4: [
+            { member: 'Olivia Martin', attendance: 'Present' },
+            { member: 'William Harris', attendance: 'Absent' },
+            { member: 'Ava Garcia', attendance: 'Present' }
+        ]
+    };
+
+    const teamAttendanceData = attendanceData[teamId];
+
+    // Display attendance data on the page
+    const attendanceTableBody = document.getElementById('attendance-data-body');
+    attendanceTableBody.innerHTML = '';
+
+    teamAttendanceData.forEach((attendance) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${attendance.member}</td>
+            <td>${attendance.attendance}</td>
+            <td>
+                <button class="delete-button">Delete</button>
+                <button class="save-button">Save</button>
+            </td>
+        `;
+        attendanceTableBody.appendChild(row);
+    });
+
+    // Show attendance data section
+    document.getElementById('attendance-data').classList.remove('hidden');
+}
+
+// Add event listeners for delete and save buttons
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete-button')) {
+        const row = e.target.parentNode.parentNode;
+        row.remove();
+    } else if (e.target.classList.contains('save-button')) {
+        const row = e.target.parentNode.parentNode;
+        const attendanceData = {
+            member: row.cells[0].textContent,
+            attendance: row.cells[1].textContent
+        };
+        const attendanceDataJson = JSON.stringify(attendanceData);
+        console.log(attendanceDataJson);
+    }
+});
